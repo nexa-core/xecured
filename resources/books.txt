@@ -1,9 +1,0 @@
-    "The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws" by Dafydd Stuttard and Marcus Pinto: This book focuses on web application security and provides in-depth coverage of various vulnerabilities and attack techniques commonly encountered in web applications.
-
-    "Metasploit: The Penetration Tester's Guide" by David Kennedy, Jim O'Gorman, Devon Kearns, and Mati Aharoni: This book is a comprehensive guide to using the Metasploit Framework, a powerful tool for penetration testing and vulnerability assessment. It covers a wide range of topics, including information gathering, exploitation, post-exploitation, and more.
-
-    "Hacking: The Art of Exploitation" by Jon Erickson: This book is often recommended for beginners as it covers fundamental concepts of hacking and provides hands-on examples and exercises. It covers topics like stack overflows, shellcode, and network sniffing.
-
-    "The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy" by Patrick Engebretson: This book is a beginner-friendly introduction to ethical hacking and penetration testing. It covers the basics of reconnaissance, scanning, exploitation, and maintaining access.
-
-    "CEH Certified Ethical Hacker All-in-One Exam Guide" by Matt Walker: This book is designed as a comprehensive guide for those preparing for the Certified Ethical Hacker (CEH) certification. It covers a wide range of topics, including footprinting and reconnaissance, scanning networks, system hacking, and more.
