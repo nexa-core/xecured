@@ -49,14 +49,10 @@ body {
     animation: fadeInUp 1s;
   }
 
-  .feature:hover {
-    background:linear-gradient(
-      45deg,
-      #734b6d,
-      #42275a 100%
-    );
+  /*.feature:hover {
+    background:linear-gradient(to right, #734b6d, #42275a);
     color: #D8BFD8;
-  }
+  }*/
 
   .feature i {
     font-size: 3rem;
