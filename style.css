@@ -10,7 +10,7 @@ body {
   .navbar {
     animation: fadeInDown 1s;
     box-shadow: 0 2px 4px 0 #2c1f30;
-    background: linear-gradient(to right, #D8BFD8, #42275a);
+    background: linear-gradient(to right, #D8BFD8, #D8BFD8);
   }
 
   .navbar a {
