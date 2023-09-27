@@ -9,13 +9,12 @@ body {
 
   .navbar {
     animation: fadeInDown 1s;
-    background: linear-gradient(to right, #734b6d, #42275a);
-    color: #D8BFD8;
     box-shadow: 0 2px 4px 0 #2c1f30;
+    background: linear-gradient(to right, #D8BFD8, #D8BFD8);
   }
 
   .navbar a {
-    color: #D8BFD8;
+    color: #42275a;
   }
 
   .navbar a:hover {
