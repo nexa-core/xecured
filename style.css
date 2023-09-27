@@ -1,22 +1,38 @@
+html {
+  overflow: scroll;
+}
+
 body {
-    background: linear-gradient(to right, #2c1f30, #161018);
+    background: #2c1f30;
+    font-family: 'Montserrat';
   }
 
   .navbar {
     animation: fadeInDown 1s;
+    background: linear-gradient(to right, #734b6d, #42275a);
+    color: #D8BFD8;
+    box-shadow: 0 2px 4px 0 #2c1f30;
+  }
+
+  .navbar a {
+    color: #D8BFD8;
+  }
+
+  .navbar a:hover {
+    color: #42275a;
   }
 
   .container {
     animation: slideInLeft 1s;
-  }
-
-  .color {
-    background: linear-gradient(to right, #734b6d, #42275a);
-    color: #D8BFD8;
+    padding-top: 5rem;
   }
 
   .a {
     color: #D8BFD8;
+  }
+
+  .a :hover{
+   color: #42275a;
   }
 
   .jumbotron {
@@ -30,13 +46,13 @@ body {
   }
 
   .jumbotron h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
 
   .jumbotron p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 0;
   }
 
@@ -49,20 +65,21 @@ body {
     animation: fadeInUp 1s;
   }
 
-  .feature i {
-    font-size: 3rem;
-    color: #667eea;
-    margin-bottom: 1rem;
+  .feature a {
+    color: black;
+    text-decoration: none;
   }
+  
 
   .feature h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: black;
   }
 
   .feature p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 0;
   }
 
@@ -76,20 +93,26 @@ body {
   }
 
   .cta h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
   }
 
   .cta p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
   }
 
   .cta .btn {
-    font-size: 1.2rem;
     padding: 1rem 2rem;
-    border-radius: 0.5rem;
+    color: #D8BFD8;
+    background: linear-gradient(to right, #734b6d, #42275a);
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    color: #D8BFD8;
+    background: linear-gradient(to right, #734b6d, #42275a);
   }
 
   @keyframes fadeInDown {
