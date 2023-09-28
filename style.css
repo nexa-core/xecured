@@ -110,8 +110,9 @@ body {
 
   .btn {
     padding: 1rem 2rem;
-    color: #D8BFD8;
-    background: linear-gradient(to right, #734b6d, #42275a);
+    color: #2c1f30;
+    box-shadow: 0px 10px 10px #2c1f30;
+    background-color: #D8BFD8;
   }
 
   @keyframes fadeInDown {
