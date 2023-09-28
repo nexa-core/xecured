@@ -83,7 +83,8 @@ body {
   }
 
   .cta {
-    background-color: #D8BFD8;
+    background: linear-gradient(to right, #734b6d, #42275a);
+    color: #D8BFD8;
     border-radius: 0.5rem;
     padding: 4rem 2rem;
     margin-top: 4rem;
@@ -102,16 +103,10 @@ body {
     margin-bottom: 2rem;
   }
 
-  .cta .btn {
-    padding: 1rem 2rem;
-    color: #D8BFD8;
-    background: linear-gradient(to right, #734b6d, #42275a);
-  }
-
   .btn {
     padding: 1rem 2rem;
     color: #2c1f30;
-    box-shadow: -5px 5px 5px #2c1f30;
+    box-shadow: -0.3rem 0.3rem 0.3rem #2c1f30;
     background-color: #D8BFD8;
   }
 
