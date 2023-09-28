@@ -18,7 +18,7 @@ body {
   }
 
   .navbar a:hover {
-    color: #42275a;
+    text-decoration: underline;
   }
 
   .container {
