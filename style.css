@@ -3,22 +3,18 @@ html {
 }
 
 body {
-    background: #2c1f30;
+    background: #2b7a78;
     font-family: 'Montserrat';
   }
 
   .navbar {
     animation: fadeInDown 1s;
-    box-shadow: 0 2px 4px 0 #2c1f30;
-    background: linear-gradient(to right, #D8BFD8, #D8BFD8);
+    box-shadow: 0 2px 4px 0 #17252a;
+    background: linear-gradient(to right, #66fcf1, #66fcf1);
   }
 
   .navbar a {
-    color: #42275a;
-  }
-
-  .navbar a:hover {
-    text-decoration: underline;
+    color: #17252a;
   }
 
   .container {
@@ -27,7 +23,7 @@ body {
   }
 
   .a {
-    color: #D8BFD8;
+    color: #66fcf1;
   }
 
   .a :hover{
@@ -35,12 +31,12 @@ body {
   }
 
   .jumbotron {
-    background: linear-gradient(to right, #734b6d, #42275a);
-    color: #D8BFD8;
+    background: linear-gradient(to right, #17252a, #17252a);
+    color: #66fcf1;
     padding: 4rem 2rem;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: -1rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
     animation: fadeInUp 1s;
   }
 
@@ -56,16 +52,15 @@ body {
   }
 
   .feature {
-    background-color: #D8BFD8;
+    background-color: #def2f1;
     border-radius: 0.5rem;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    animation: fadeInUp 1s;
+    box-shadow: -1rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
   }
 
   .feature a {
-    color: black;
+    color: #17252a;
     text-decoration: none;
   }
   
@@ -83,12 +78,11 @@ body {
   }
 
   .cta {
-    background: linear-gradient(to right, #734b6d, #42275a);
-    color: #D8BFD8;
+    background: linear-gradient(to right, #17252a, #17252a);
+    color: #66fcf1;
     border-radius: 0.5rem;
     padding: 4rem 2rem;
-    margin-top: 4rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: -1rem 0.5rem 1rem rgba(0, 0, 0, 0.25);
     animation: fadeInUp 1s;
   }
 
@@ -105,40 +99,6 @@ body {
 
   .btn {
     padding: 1rem 2rem;
-    color: #2c1f30;
-    box-shadow: -0.3rem 0.3rem 0.3rem #2c1f30;
-    background-color: #D8BFD8;
-  }
-
-  @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    color: #17252a;
+    background-color: #66fcf1;
   }
