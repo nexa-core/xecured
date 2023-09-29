@@ -3,18 +3,18 @@ html {
 }
 
 body {
-    background: #2b7a78;
+    background: #17252a;
     font-family: 'Montserrat';
   }
 
   .navbar {
     animation: fadeInDown 1s;
     box-shadow: 0 2px 4px 0 #17252a;
-    background: linear-gradient(to right, #66fcf1, #66fcf1);
+    background: linear-gradient(to right, #17252a, #455);
   }
 
   .navbar a {
-    color: #17252a;
+    color: #66fcf1;
   }
 
   .container {
@@ -31,7 +31,7 @@ body {
   }
 
   .jumbotron {
-    background: linear-gradient(to right, #17252a, #17252a);
+    background: linear-gradient(to right, #17252a, #455);
     color: #66fcf1;
     padding: 4rem 2rem;
     border-radius: 0.5rem;
@@ -80,7 +80,7 @@ body {
   }
 
   .cta {
-    background: linear-gradient(to right, #17252a, #17252a);
+    background: linear-gradient(to right, #17252a, #455);
     color: #66fcf1;
     border-radius: 0.5rem;
     padding: 4rem 2rem;
