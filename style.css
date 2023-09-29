@@ -114,6 +114,7 @@ body {
   @font-face {
     font-family: Montserrat;
     src: url('/Montserrat.woff2');
+    font-display: swap;
   }
   
   
