@@ -4,7 +4,7 @@ html {
 
 body {
     background: #17252a;
-    font-family: 'Montserrat';
+    font-family: Montserrat;
   }
 
   .navbar {
@@ -110,3 +110,10 @@ body {
     color: #66fcf1;
     padding: 0.5rem;
   }
+
+  @font-face {
+    font-family: Montserrat;
+    src: url('/Montserrat.woff2');
+  }
+  
+  
