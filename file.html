@@ -1,104 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Release File Uploader</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        input[type="file"] {
-            display: none;
-        }
-        label, button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-        }
-        label:hover, button:hover {
-            background-color: #0056b3;
-        }
-        #uploadStatus {
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+  <title>Upload File to GitHub Release</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
-    <h1>Upload File to GitHub Release</h1>
-    <label for="fileInput">Select File</label>
-    <input type="file" id="fileInput" accept=".zip, .tar.gz">
-    <button id="uploadButton">Upload</button>
-    <div id="uploadStatus"></div>
+  <h1>Upload File to GitHub Release</h1>
+  <input type="file" id="file-upload" />
+  <button type="button" id="upload-button">Upload</button>
+  <script>
+    const uploadButton = document.querySelector("#upload-button");
+    const fileUpload = document.querySelector("#file-upload");
+    const token = "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";
+    const repo = "https://github.com/nexa-core/files";
 
-    <script>
-        document.getElementById('uploadButton').addEventListener('click', async () => {
-            const fileInput = document.getElementById('fileInput');
-            const file = fileInput.files[0];
-            const uploadStatus = document.getElementById('uploadStatus');
+    uploadButton.addEventListener("click", async () => {
+      const file = fileUpload.files[0];
 
-            if (file) {
-                if (file.size <= 2 * 1024 * 1024 * 1024) { // Check file size (2GB limit)
-                    const githubAccessToken = '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';
-                    const repoOwner = 'nexa-core';
-                    const repoName = 'files';
+      if (!file) {
+        alert("Please select a file to upload.");
+        return;
+      }
 
-                    const releaseUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/releases/latest`;
+      if (file.size > 2 * 1024 * 1024 * 1024) {
+        alert("The file size is too large. The maximum file size is 2 GB.");
+        return;
+      }
 
-                    try {
-                        // Fetch the latest release to get the release ID
-                        const releaseResponse = await fetch(releaseUrl, {
-                            headers: {
-                                'Authorization': `token ${githubAccessToken}`,
-                                'Accept': 'application/vnd.github.v3+json'
-                            }
-                        });
+      const formData = new FormData();
+      formData.append("file", file);
 
-                        if (releaseResponse.ok) {
-                            const releaseData = await releaseResponse.json();
-                            const releaseId = releaseData.id;
+      const response = await fetch(`${repo}/releases/upload_assets`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
 
-                            // Create a FormData object to send the file
-                            const formData = new FormData();
-                            formData.append('file', file);
-
-                            // Upload the file to the release
-                            const uploadResponse = await fetch(`https://uploads.github.com/repos/${repoOwner}/${repoName}/releases/${releaseId}/assets?name=${file.name}`, {
-                                method: 'POST',
-                                body: formData,
-                                headers: {
-                                    'Authorization': `token ${githubAccessToken}`
-                                }
-                            });
-
-                            if (uploadResponse.ok) {
-                                uploadStatus.textContent = 'File uploaded successfully to GitHub release!';
-                            } else {
-                                uploadStatus.textContent = 'Error uploading file to GitHub release. Please check your token and repository settings.';
-                            }
-                        } else {
-                            uploadStatus.textContent = 'Error fetching the latest release. Please check your token and repository settings.';
-                        }
-                    } catch (error) {
-                        uploadStatus.textContent = 'An error occurred: ' + error.message;
-                    }
-                } else {
-                    uploadStatus.textContent = 'File size too large. Maximum file size is 2GB.';
-                }
-            } else {
-                uploadStatus.textContent = 'Please select a file to upload.';
-            }
-        });
-    </script>
+      if (response.ok) {
+        alert("The file was uploaded successfully!");
+      } else {
+        alert("There was an error uploading the file.");
+      }
+    });
+  </script>
 </body>
 </html>
-
